@@ -48,7 +48,7 @@ public class MyStack implements StackInterface {
 
 	@Override
 	public boolean isFull() {
-		if (size == top - 1) {
+		if (size - 1 == top) {
 			System.out.println("Stack is full !!");
 			return true;
 		}
