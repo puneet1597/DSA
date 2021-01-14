@@ -3,11 +3,13 @@ package myStackApp;
 public class MyStack implements StackInterface {
 
 	int[] arr;
+	int[] rev;
 	int top;
 	int size;
 
 	public MyStack(int s) {
 		arr = new int[s];
+		rev = new int[s];
 		size = s;
 		top = -1;
 	}
@@ -65,23 +67,15 @@ public class MyStack implements StackInterface {
 	}
 
 	@Override
-	public void displayInReverseOrder() {
-		for (int i = size - 1; i >= 0; i--) {
-			if (arr[i] != 0) {
-				System.out.println(arr[i]);
-			}
+	public void displayAndReverseStack() {
+		for (int i = 0; i < size; i++) {
+			rev[i] = pop();
+			System.out.println(rev[i]);
 		}
-	}
-
-	@Override
-	public void reverseTheStack() {
-		for (int i = size - 1; i >= 0; i--) {
-			int a = arr[top];
-			arr[top] = a;
-			System.out.println(arr[top]);
-			--top;
-		}
-		System.out.println("Stack successfully got reversed");
+		
+		for(int j = 0; j< size; j++) {
+			push(rev[j]);
+		} 
 	}
 
 }
