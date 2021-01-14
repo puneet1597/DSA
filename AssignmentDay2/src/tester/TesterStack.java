@@ -16,9 +16,8 @@ public class TesterStack {
 				System.out.println("Press 1 for add the element in the stack");
 				System.out.println("Press 2 to remove the element from the stack");
 				System.out.println("Press 3 to display the elements of the stack");
-				System.out.println("Press 4 to display the elements in the reverse order");
-				System.out.println("Press 5 to reverse the data of the stack");
-				System.out.println("Press 6 for exit");
+				System.out.println("Press 4 to reverse and display the data of the stack");
+				System.out.println("Press 5 for exit");
 
 				switch (sc.nextInt()) {
 				case 1:
@@ -39,7 +38,7 @@ public class TesterStack {
 					break;
 
 				case 4:
-					s.displayInReverseOrder();
+					s.displayAndReverseStack();
 					break;
 				
 				case 5:
