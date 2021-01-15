@@ -7,6 +7,5 @@ public interface StackInterface {
 	public boolean isEmpty();
 	public boolean isFull();
 	void display();
-	void displayInReverseOrder();
-	void reverseTheStack();
+	void displayAndReverseStack();
 }
